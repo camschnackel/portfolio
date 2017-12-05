@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "angular-animate": "^1.6.7",
     "angular-aria": "^1.6.7",
     "angular-material": "^1.1.5",
+    "angular-material-icons": "^0.7.1",
     "angular-messages": "^1.6.7",
     "angular-route": "^1.6.7",
     "body-parser": "^1.18.2",
