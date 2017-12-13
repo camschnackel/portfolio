@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngMessages', 'ngMdIcons']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngMessages', 'ngMdIcons']);
 /// Routes ///
-myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
+myApp.config(function ($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
   console.log('myApp -- config');
   $routeProvider
@@ -15,6 +15,6 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
 
   $locationProvider.html5Mode(true);
 
-  $mdThemingProvider.theme('default').primaryPalette('green').accentPalette('green')
+  // $mdThemingProvider.theme('default').primaryPalette('green').accentPalette('green')
 
 });
