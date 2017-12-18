@@ -1,15 +1,63 @@
-.mainSection {
+html {
+    background-color: hsl(0, 0%, 21%);
+}
+
+/* nav {
+    padding: 20px 0 20px 0;
+} */
+
+/* .mainSection {
     margin-top: 50px;
+} */
+
+.noBotPad {
+    padding-bottom: 0;
+}
+
+.primaryColor {
+    background-color: hsl(204, 86%, 53%);
+}
+
+@keyframes fadeIn {
+    from {
+        color: rgba(74, 74, 74, 0);
+        left: 100%
+    }
+    to {
+        color: rgba(74, 74, 74, 1);
+        left: 0%;
+    }
 }
 
 #profImg {
-    height: 350px;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#profImgTouch {
+    max-height: 300px;
+    max-width: 300px;
 }
 
 h1 {
+    color: rgba(74, 74, 74, 1);
+    font-size: 93px;
+    position: relative;
+    animation-name: fadeIn;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+}
+
+h3 {
     font-size: 36px;
 }
 
-h2 {
+h4 {
     font-size: 24px;
+}
+
+p {
+    color: hsl(0, 0%, 77%);
+    font-size: 18px;
 }
