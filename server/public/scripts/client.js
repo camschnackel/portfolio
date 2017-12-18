@@ -7,6 +7,12 @@ myApp.config(function ($routeProvider, $locationProvider) {
     .when('/about', {
       templateUrl: '/views/templates/about.html',
       controller: 'AboutController as ac',
+    }).when('/projects', {
+      templateUrl: '/views/templates/projects.html',
+      controller: 'ProjectsController as pc',
+    }).when('/contact', {
+      templateUrl: '/views/templates/contact.html',
+      controller: 'ContactController as cc',
     })
     .otherwise({
       redirectTo: '/about'

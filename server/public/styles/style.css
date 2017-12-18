@@ -10,6 +10,18 @@ html {
     margin-top: 50px;
 } */
 
+.navItem {
+    color: rgb(84, 24, 107);
+}
+
+.navItem:hover {
+    color: rgb(212, 212, 212);
+}
+
+.selected {
+    text-decoration: underline;
+}
+
 .noBotPad {
     padding-bottom: 0;
 }
