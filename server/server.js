@@ -1,11 +1,10 @@
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+require('dotenv').config();
+const bodyParser = require('body-parser');
 
-// Route includes
-var indexRouter = require('./routes/index.router');
-
-var port = process.env.PORT || 5000;
+const request = require('request');
+const port = process.env.PORT || 5000;
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -16,8 +15,12 @@ app.use(bodyParser.urlencoded({
 // Serve back static files
 app.use(express.static('./server/public'));
 
+// Route includes
+const githubRouter = require('./routes/github.router');
+const indexRouter = require('./routes/index.router');
+
 // Routes
-// app.use('/register', registerRouter);
+app.use('/github', githubRouter);
 
 // Catch all bucket, must be last!
 app.use('/*', indexRouter);

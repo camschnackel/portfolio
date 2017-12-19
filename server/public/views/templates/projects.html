@@ -5,5 +5,13 @@
     </div>
 </section>
 <section class="container section noBotPad">
-    test
+    <p>Github Repos - {{pc.user.data.public_repos}} and counting!</p>
+
+    <div class="tile is-ancestor">
+        <div class="tile is-12 is-parent">
+            <div class="tile is-child box" ng-repeat="repo in ">
+                <p class="title">One</p>
+            </div>
+        </div>
+    </div>
 </section>

@@ -33,7 +33,7 @@ html {
 @keyframes fadeIn {
     from {
         color: rgba(74, 74, 74, 0);
-        left: 100%
+        left: 50%
     }
     to {
         color: rgba(74, 74, 74, 1);
@@ -57,7 +57,7 @@ h1 {
     font-size: 93px;
     position: relative;
     animation-name: fadeIn;
-    animation-duration: 2.5s;
+    animation-duration: 1s;
     animation-timing-function: ease-out;
 }
 

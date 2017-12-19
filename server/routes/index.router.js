@@ -1,12 +1,13 @@
-var express = require('express');
-var router = express.Router();
-var path = require('path');
+const express = require('express');
+const router = express.Router();
+const path = require('path');
 
 // Handle index file separately
 // Also catches any other request not explicitly matched elsewhere
 router.get('/', function(req, res) {
-  console.log('request for index');
-  res.sendFile(path.join(__dirname, '../public/views/index.html'));
+  console.log('In base GET route.');
+  const indexRoute = (path.join(__dirname, '../public/views/index.html'));
+  res.sendFile(indexRoute);
 });
 
 router.get('/*', function(req, res) {
