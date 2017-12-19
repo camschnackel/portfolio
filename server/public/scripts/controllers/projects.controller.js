@@ -16,5 +16,5 @@ myApp.controller('ProjectsController', function ($scope, GithubService) {
     GithubService.githubProfile();
     GithubService.githubRepos();
 
-
+    
 });
