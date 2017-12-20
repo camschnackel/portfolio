@@ -87,3 +87,12 @@ p.about {
     color: hsl(0, 0%, 77%);
     font-size: 24px;
 }
+
+.myFooter {
+    margin-top: 50px;
+    padding: 0;
+}
+
+.footerContent {
+    color: hsl(204, 86%, 53%);
+}
