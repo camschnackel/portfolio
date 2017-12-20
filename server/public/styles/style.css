@@ -30,6 +30,8 @@ html {
 
 .noBotPad {
     padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .primaryColor {
@@ -86,6 +88,10 @@ p {
 p.about {
     color: hsl(0, 0%, 77%);
     font-size: 24px;
+}
+
+#contact {
+    color: rgb(211, 211, 211);
 }
 
 .myFooter {

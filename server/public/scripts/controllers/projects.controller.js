@@ -25,7 +25,7 @@ myApp.controller('ProjectsController', function ($scope, GithubService) {
         {
             name: 'Giphy Generator',
             tech: 'MEAN Stack (MongoDB, Express.js, AngularJS, Node.js), HTML5, CSS3, JavaScript, Bootstrap',
-            images: [],
+            images: ['../../images/screenGiphy1.PNG', '../../images/screenGiphy2.PNG'],
             description: 'This basic app that was created as part of an excercise to better understand how to use an API. The app contains a search bar that takes the entered query and renders up to 20 image results onto the page pulled from the Giphy API.'
         },
 
