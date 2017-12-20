@@ -11,8 +11,8 @@
         <div class="tile is-12 is-parent">
             <div class="tile is-child box">
                 <p class="title">{{repo.name}} 
-                    <a ng-href="{{repo.url}}" target="_blank" ng-if="repo.url !== undefined">
-                        <span class="icon" title="Open app in new tab">
+                    <a ng-if="repo.url !== undefined">
+                        <span class="icon" title="Go to app" ng-click="pc.modalToggle($index)">
                             <i class="mdi mdi-open-in-new"></i>
                         </span>
                     </a>
@@ -28,6 +28,31 @@
                     </div>
                     <p>{{repo.description}}</p>
                 </div>
+            </div>
+        </div>
+        <div class="modal" ng-class="{'is-active': pc.modal[$index]}">
+            <div class="modal-background" ng-click="pc.modalToggle($index)"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Visit {{repo.name}}</p>
+                    <button class="delete" aria-label="close" ng-click="pc.modalToggle($index)"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p class="subtitle">
+                        Click the green button below to open this app in a new tab. 
+                        {{repo.info}}
+                    </p>
+                    <p ng-if="repo.creds !== undefined" class="subtitle">
+                        When you reach the site use the following credentials: <br>
+                        {{repo.creds}}
+                    </p>
+                </section>
+                <footer class="modal-card-foot">
+                    <a  ng-href="{{repo.url}}" target="_blank">
+                    <button class="button is-success" style="margin-right: 4px">Go to App</button>
+                    </a> 
+                    <button class="button is-warn" ng-click="pc.modalToggle($index)">Cancel</button>
+                </footer>
             </div>
         </div>
     </div>
