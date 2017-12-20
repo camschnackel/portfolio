@@ -8,9 +8,8 @@
     <title>Cam Schnackel</title>
 
     <!-- <link rel="stylesheet" href="vendors/angular-material/angular-material.min.css"> -->
-    <link rel="stylesheet" href="vendors/angular-material-icons/angular-material-icons.css">
-    <link rel="stylesheet" href="vendors/bulma/bulma.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="styles/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />    <link rel="stylesheet" href="vendors/bulma/bulma.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="styles/style.css">
 
     <script type="text/javascript" src="vendors/angular/angular.js"></script>
@@ -35,6 +34,7 @@
     
     <main ng-view></main>
 
-    <footer></footer>
+    <footer ng-include="'views/partials/footer.html'">
+    </footer>
 </body>
 </html>

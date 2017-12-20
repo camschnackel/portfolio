@@ -1,4 +1,4 @@
-const myApp = angular.module('myApp', ['ngRoute', 'ngMessages', 'ngMdIcons']);
+const myApp = angular.module('myApp', ['ngRoute', 'ngMessages']);
 /// Routes ///
 myApp.config(function ($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
