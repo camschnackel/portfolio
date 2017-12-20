@@ -23,19 +23,19 @@
                         <div class="field">
                             <label class="label">Name</label>
                             <div class="control">
-                                <input class="input" type="text" placeholder="Enter you name">
+                                <input class="input" type="text" placeholder="Enter you name" ng-model="cc.contactForm.name">
                             </div>
                         </div>
 
                         <div class="field">
                             <label class="label">Email</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input class="input is-danger" type="email" placeholder="Enter your email" value="">
+                                <input class="input is-danger" type="email" placeholder="Enter your email" value="" ng-model="cc.contactForm.email">
                                 <span class="icon is-small is-left">
                                     <i class="mdi mdi-email"></i>
                                 </span>
                                 <span class="icon is-small is-right">
-                                    <i class="mdi mdi-warn"></i>
+                                    <i class="mdi mdi-warning"></i>
                                 </span>
                             </div>
                             <p class="help is-danger">This email is invalid</p>
@@ -44,21 +44,38 @@
                         <div class="field">
                             <label class="label">Message</label>
                             <div class="control">
-                                <textarea class="textarea" placeholder="What would you like to say?"></textarea>
+                                <textarea class="textarea" placeholder="What would you like to say?" ng-model="cc.contactForm.message"></textarea>
                             </div>
                         </div>
 
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-link">Submit</button>
+                                <button class="button is-link" ng-click="cc.sendMessage()">Submit</button>
                             </div>
                             <div class="control">
-                                <button class="button is-text">Cancel</button>
+                                <button class="button is-text" ng-click="cc.clearFields()">Clear</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="modal" ng-class="{'is-active': cc.modal}">
+        <div class="modal-background" ng-click="cc.modalToggle()"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <button class="delete" aria-label="close" ng-click="cc.modalToggle()"></button>
+            </header>
+            <section class="modal-card-body">
+                <p class="subtitle">
+                    Thank you for your message. I will be in touch with you within the next 48 hours.
+                </p>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button" ng-click="cc.modalToggle()">Close</button>
+            </footer>
         </div>
     </div>
 </section>
