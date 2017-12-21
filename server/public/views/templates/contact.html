@@ -13,69 +13,77 @@
             </p>
             <br>
             <p class="is-size-3" id="contact">
-                Please don't hesitate to reach out. Whether you're impressed by my work and have need for my skills or even just want to grab coffee and chat, use the contact form to the right to sned me a message and I will get back to you as soon as possible!
+                If you're looking for a talented Software Engineer or even just want to grab coffee and chat, use the contact form to the right and I will reach out to you as soon as possible.
             </p>
         </div>
         <div class="tile is-ancestor">
             <div class="tile is-12 is-vertical is-parent">
                 <div class="tile is-child box">
                     <div class="column">
+                        <form class="control" ng-submit="cc.sendMessage()">
                         <div class="field">
                             <label class="label">Name</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Enter you name" ng-model="cc.contactForm.name">
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" placeholder="Enter you name" ng-model="cc.contactForm.name" required>
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-account"></i>
+                                </span>
                             </div>
                         </div>
 
                         <div class="field">
                             <label class="label">Email</label>
-                            <div class="control has-icons-left has-icons-right">
-                                <input class="input is-danger" type="email" placeholder="Enter your email" value="" ng-model="cc.contactForm.email">
+                            <div class="control has-icons-left">
+                                <input class="input" type="email" placeholder="Enter your email" value="" ng-model="cc.contactForm.email" required>
                                 <span class="icon is-small is-left">
                                     <i class="mdi mdi-email"></i>
                                 </span>
-                                <span class="icon is-small is-right">
-                                    <i class="mdi mdi-warning"></i>
-                                </span>
                             </div>
-                            <p class="help is-danger">This email is invalid</p>
                         </div>
 
                         <div class="field">
                             <label class="label">Message</label>
                             <div class="control">
-                                <textarea class="textarea" placeholder="What would you like to say?" ng-model="cc.contactForm.message"></textarea>
+                                <textarea class="textarea" placeholder="What would you like to say?" ng-model="cc.contactForm.message" required></textarea>
                             </div>
                         </div>
 
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-link" ng-click="cc.sendMessage()">Submit</button>
+                                <button class="button is-link" type="submit">Submit</button>
                             </div>
                             <div class="control">
                                 <button class="button is-text" ng-click="cc.clearFields()">Clear</button>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal" ng-class="{'is-active': cc.modal}">
-        <div class="modal-background" ng-click="cc.modalToggle()"></div>
+    <div class="modal" ng-class="{'is-active': cc.modal.success}">
+        <div class="modal-background" ng-click="cc.modalToggle('success')"></div>
         <div class="modal-card">
-            <header class="modal-card-head">
-                <button class="delete" aria-label="close" ng-click="cc.modalToggle()"></button>
-            </header>
-            <section class="modal-card-body">
+            <section class="modal-card-body has-text-centered">
                 <p class="subtitle">
-                    Thank you for your message. I will be in touch with you within the next 48 hours.
+                    Your message was successfully sent. Thank you for reaching out. I will be in touch with you within the next 48 hours.
                 </p>
+                <button class="button is-success" ng-click="cc.modalToggle('success')">Close</button>
             </section>
-            <footer class="modal-card-foot">
-                <button class="button" ng-click="cc.modalToggle()">Close</button>
-            </footer>
+        </div>
+    </div>
+
+    <div class="modal" ng-class="{'is-active': cc.modal.error}">
+        <div class="modal-background" ng-click="cc.modalToggle('error')"></div>
+        <div class="modal-card">
+            <section class="modal-card-body has-text-centered">
+                <p class="subtitle">
+                    Something went wrong, please try again later. If the issue persists feel free to reach out to me via <a href="https://www.linkedin.com/in/camschnackel/">LinkedIn</a> or send me an email at cam@schnackel.io.
+                </p>
+                <button class="button is-success" ng-click="cc.modalToggle('error')">Close</button>
+            </section>
         </div>
     </div>
 </section>

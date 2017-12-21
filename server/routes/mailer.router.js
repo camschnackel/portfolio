@@ -27,11 +27,11 @@ const transporter = nodemailer.createTransport({
 router.post('/', function (req, res) {
     console.log('mailer post ran');
     transporter.sendMail({
-        from: req.body.email,
+        from: contactCredentials.username,
         to: cameron,
-        subject: 'schnackel.io message from ' + req.body.name,
+        subject: 'schnackel.io message from ' + req.body.name + ' [' + req.body.email +']',
         text: req.body.message
-    }),
+    },
         function (err, response) {
             if (err) {
                 console.log('Mailer POST err', err);
@@ -41,6 +41,7 @@ router.post('/', function (req, res) {
                 res.send(response);
             }
         }
+    )
 });
 
 module.exports = router;

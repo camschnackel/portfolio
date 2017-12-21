@@ -6,13 +6,15 @@
 </section>
 <section class="container section noBotPad">
     <!-- <p>Github Repos - {{pc.user.data.public_repos}} and counting!</p> -->
-
+    <p class="is-size-1 has-text-weight-semibold" id="contact">
+        Featured
+    </p>
     <div class="tile is-ancestor" ng-repeat="repo in pc.featRepos">
         <div class="tile is-12 is-parent">
             <div class="tile is-child box">
                 <p class="title">{{repo.name}} 
                     <a ng-if="repo.url !== undefined">
-                        <span class="icon" title="Go to app" ng-click="pc.modalToggle($index)">
+                        <span class="icon" title="Go to app" ng-click="pc.featModalToggle($index)">
                             <i class="mdi mdi-open-in-new"></i>
                         </span>
                     </a>
@@ -30,12 +32,12 @@
                 </div>
             </div>
         </div>
-        <div class="modal" ng-class="{'is-active': pc.modal[$index]}">
-            <div class="modal-background" ng-click="pc.modalToggle($index)"></div>
+        <div class="modal" ng-class="{'is-active': pc.featModal[$index]}">
+            <div class="modal-background" ng-click="pc.featModalToggle($index)"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
                     <p class="modal-card-title">Visit {{repo.name}}</p>
-                    <button class="delete" aria-label="close" ng-click="pc.modalToggle($index)"></button>
+                    <button class="delete" aria-label="close" ng-click="pc.featModalToggle($index)"></button>
                 </header>
                 <section class="modal-card-body">
                     <p class="subtitle">
@@ -51,11 +53,61 @@
                     <a  ng-href="{{repo.url}}" target="_blank">
                     <button class="button is-success" style="margin-right: 4px">Go to App</button>
                     </a> 
-                    <button class="button is-warn" ng-click="pc.modalToggle($index)">Cancel</button>
+                    <button class="button is-warn" ng-click="pc.featModalToggle($index)">Cancel</button>
                 </footer>
             </div>
         </div>
     </div>
+    <p class="is-size-1 has-text-weight-semibold" id="contact">
+        More Projects
+    </p>
+    <div class="tile is-ancestor">
+        <div class="tile is-6 is-parent" ng-repeat="repo in pc.miscRepos">
+            <div class="tile is-child box">
+                <p class="title">{{repo.name}}
+                    <a ng-if="repo.url !== undefined">
+                        <span class="icon" title="Go to app" ng-click="pc.miscModalToggle($index)">
+                            <i class="mdi mdi-open-in-new"></i>
+                        </span>
+                    </a>
+                </p>
+                <p class="subtitle">{{repo.tech}}</p>
+                <div class="content">
+                    <div class="columns is-gapless">
+                        <div class="column" ng-repeat="filename in repo.images">
+                            <figure class="image">
+                                <img ng-src="{{filename}}" class="borderBlue">
+                            </figure>
+                        </div>
+                    </div>
+                    <p>{{repo.description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal" ng-class="{'is-active': pc.miscModal[$index]}">
+            <div class="modal-background" ng-click="pc.miscModalToggle($index)"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Visit {{repo.name}}</p>
+                    <button class="delete" aria-label="close" ng-click="pc.miscModalToggle($index)"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p class="subtitle">
+                        Click the green button below to open this app in a new tab. {{repo.info}}
+                    </p>
+                    <p ng-if="repo.creds !== undefined" class="subtitle">
+                        When you reach the site use the following credentials:
+                        <br> {{repo.creds}}
+                    </p>
+                </section>
+                <footer class="modal-card-foot">
+                    <a ng-href="{{repo.url}}" target="_blank">
+                        <button class="button is-success" style="margin-right: 4px">Go to App</button>
+                    </a>
+                    <button class="button is-warn" ng-click="pc.miscModalToggle($index)">Cancel</button>
+                </footer>
+            </div>
+        </div>
 
     <!-- <div class="tile is-ancestor">
         <div class="tile is-12 is-parent">

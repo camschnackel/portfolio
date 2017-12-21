@@ -7,10 +7,15 @@ myApp.controller('ContactController', function ($scope, ContactService) {
         name: this.name,
         email: this.email,
         message: this.message
-    }
-    vm.modal = false;
-    vm.modalToggle = function () {
-        vm.modal = !vm.modal;
+    };
+    vm.modal = {};
+    vm.modalToggle = function (type) {
+        if (type === 'success'){
+            vm.modal.success = !vm.modal.success;
+        } else {
+            vm.modal.error = !vm.modal.error;
+        }
+    
     }
 
     vm.clearFields = function () {
@@ -22,7 +27,7 @@ myApp.controller('ContactController', function ($scope, ContactService) {
     vm.sendMessage = function () {
         console.log('sendMessage ran');
         ContactService.sendMessage(vm.contactForm).then( function() {
-            vm.modalToggle();
+            vm.modalToggle('success');
             vm.clearFields();
         });
     }
