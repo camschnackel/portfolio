@@ -4,9 +4,9 @@
         <h1 class="has-text-centered has-text-left-desktop">projects</h1>
     </div>
 </section>
-<section class="container section noBotPad">
+<section class="container section noBotPad paddingFix">
     <!-- <p>Github Repos - {{pc.user.data.public_repos}} and counting!</p> -->
-    <p class="is-size-1 has-text-weight-semibold" id="contact">
+    <p class="is-size-1 is-size-3-touch has-text-weight-semibold has-text-centered-touch" id="contact">
         Featured
     </p>
     <div class="tile is-ancestor" ng-repeat="repo in pc.featRepos">
@@ -23,7 +23,7 @@
                 <div class="content">
                     <div class="columns is-gapless">
                         <div class="column is-half" ng-repeat="filename in repo.images">
-                                <figure class="image">
+                                <figure class="image screenColumn">
                                     <img ng-src="{{filename}}" class="borderBlue">
                                 </figure>
                         </div>
@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-    <p class="is-size-1 has-text-weight-semibold" id="contact">
+    <p class="is-size-1 is-size-3-touch has-text-weight-semibold has-text-centered-touch" id="contact">
         More Projects
     </p>
     <div class="tile is-ancestor">

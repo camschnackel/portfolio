@@ -42,6 +42,12 @@ html {
     background-color: hsl(0, 0%, 31%);
 }
 
+@media all and (min-width: 750px) and (max-width: 1024px) {
+    nav.navContainer {
+        margin: 0 20px 0 20px;
+    }
+}
+
 @keyframes fadeIn {
     from {
         color: rgba(74, 74, 74, 0);
@@ -53,15 +59,15 @@ html {
     }
 }
 
-#profImg {
+/* #profImg {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
-}
+} */
 
 #profImgTouch {
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 256px;
+    max-width: 256px;
 }
 
 h1 {
@@ -87,7 +93,7 @@ p {
 
 p.about {
     color: hsl(0, 0%, 77%);
-    font-size: 24px;
+    /* font-size: 24px; */
 }
 
 #contact {
@@ -101,4 +107,17 @@ p.about {
 
 .footerContent {
     color: hsl(204, 86%, 53%);
+}
+
+@media all and (max-width: 1023px) {
+    .paddingFix {
+        padding: 20px 10px 0 10px;
+    }
+    .myFooter {
+        margin-top: 30px;
+        padding: 0;
+    }
+    .screenColumn {
+        padding: 10px 0 10px 0
+    }
 }
