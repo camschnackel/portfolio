@@ -13,7 +13,7 @@ myApp.controller('ProjectsController', function ($scope, GithubService) {
             info: 'Please note that it may take up to 30 seconds to appear on intial load due to hosting limitations.',
             tech: 'MEAN Stack (MongoDB, Express.js, AngularJS, Node.js), HTML5, CSS3, JavaScript, Angular Material, Passport, Edamom Recipe API',
             images: ['../../images/screenFresh1.png', '../../images/screenFresh2.png'],
-            description: 'FreshList is a full-stack and mobile responsive application that was created to rememdy a personal bad habit I had of wasting groceries and not knowing what to cook.It allows the user to intuitively enter and track their grocery items which are sorted by their expiry date.Beside each grocery item in the list, there is a button that when clicked will provide the user with up to 5 recipe suggestions generated through the Edamom Recipe API.'
+            description: 'FreshList is a full-stack and mobile responsive application that was created to remedy a personal bad habit I had of wasting groceries and not knowing what to cook. It allows the user to intuitively enter and track their grocery items which are sorted by their expiry date. Beside each grocery item in the list, there is a button that when clicked will provide the user with up to 5 recipe suggestions generated through the Edamom Recipe API.'
         },
 
         {
@@ -23,7 +23,7 @@ myApp.controller('ProjectsController', function ($scope, GithubService) {
             creds: 'Username: "guest" Password: "guest"',
             tech: 'pSQL, Express.js, AngularJS, Node.js, HTML5, CSS3, JavaScript, Angular Material, AWS, Nodemailer, Passport',
             images: ['../../images/screenGrow1.png', '../../images/screenGrow2.png'],
-            description: 'This app was created for a client working for a startup known as Grow North. She had been tracking local agriculture volunteers and entrepreneurs using a rather inefficient process based partially from memory. Together with five other developers, we created a full stack application that improved her engagement with her clients by encouraging participation in her project via survey forms that made the data easily searchable and organized. My role within the project was varied, but I was most involved in the public facing survey forms which I ensured were user friendly and intuitive.'
+            description: 'This app was created for a client working for a startup known as Grow North. She had been tracking local agriculture volunteers and entrepreneurs using a rather inefficient process based partially from memory. Together with five other developers, we created a full stack application that improved engagement with her clients by encouraging participation in the project via survey forms that made the data easily searchable and organized. My role within the project was varied, but I was most involved in the public facing survey forms which I ensured were user friendly and intuitive.'
         }
     ];
     vm.miscRepos = [
@@ -31,7 +31,7 @@ myApp.controller('ProjectsController', function ($scope, GithubService) {
             name: 'Giphy Generator',
             tech: 'MEAN Stack (MongoDB, Express.js, AngularJS, Node.js), HTML5, CSS3, JavaScript, Bootstrap',
             images: ['../../images/screenGiphy.PNG'],
-            description: 'This basic app that was created as part of an excercise to better understand how to use an API. The app contains a search bar that takes the entered query and renders up to 20 image results onto the page pulled from the Giphy API.'
+            description: 'This basic app that was created as part of an exercise to better understand how to use an API. The app contains a search bar that takes the entered query and renders up to 20 image results onto the page pulled from the Giphy API.'
         },
 
         {
