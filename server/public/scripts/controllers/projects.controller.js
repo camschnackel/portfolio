@@ -37,7 +37,7 @@ myApp.controller('ProjectsController', function ($scope, GithubService) {
         {
             name: 'EverList',
             tech: 'Node.js, HTML5, CSS3, JavaScript, jQuery, Express, PostgresSQL, Bootstrap',
-            images: ['../../images/noScreen.png'],
+            images: ['../../images/screenEverlist1.PNG'],
             description: 'Everlist was my first crack at a basic to-do list app. Using Bootstrap and jQuery, it allows the user to enter a task with an optional field for a due date. Tasks can be checked off and deleted, with completed tasks sent to the bottom of the page. '
         }
     ];
