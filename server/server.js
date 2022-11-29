@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const request = require('request');
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 // Body parser middleware
 app.use(bodyParser.json());
