@@ -13,11 +13,11 @@
         <div class="tile is-12 is-parent">
             <div class="tile is-child box">
                 <p class="title">{{repo.name}} 
-                    <a ng-if="repo.url !== undefined">
+                    <!-- <a ng-if="repo.url !== undefined">
                         <span class="icon" title="Go to app" ng-click="pc.featModalToggle($index)">
                             <i class="mdi mdi-open-in-new"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </p>
                 <p class="subtitle">{{repo.tech}}</p>
                 <div class="content">
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" ng-class="{'is-active': pc.featModal[$index]}">
+        <!-- <div class="modal" ng-class="{'is-active': pc.featModal[$index]}">
             <div class="modal-background" ng-click="pc.featModalToggle($index)"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
@@ -56,7 +56,7 @@
                     <button class="button is-warn" ng-click="pc.featModalToggle($index)">Cancel</button>
                 </footer>
             </div>
-        </div>
+        </div> -->
     </div>
     <p class="is-size-1 is-size-3-touch has-text-weight-semibold has-text-centered-touch" id="contact">
         More Projects
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal" ng-class="{'is-active': pc.miscModal[$index]}">
+        <!-- <div class="modal" ng-class="{'is-active': pc.miscModal[$index]}">
             <div class="modal-background" ng-click="pc.miscModalToggle($index)"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
@@ -107,7 +107,7 @@
                     <button class="button is-warn" ng-click="pc.miscModalToggle($index)">Cancel</button>
                 </footer>
             </div>
-        </div>
+        </div> -->
 
     <!-- <div class="tile is-ancestor">
         <div class="tile is-12 is-parent">
