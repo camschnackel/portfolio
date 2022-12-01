@@ -13,11 +13,12 @@
         <div class="tile is-12 is-parent">
             <div class="tile is-child box">
                 <p class="title">{{repo.name}} 
-                    <!-- <a ng-if="repo.url !== undefined">
-                        <span class="icon" title="Go to app" ng-click="pc.featModalToggle($index)">
+                    <a ng-if="repo.url !== undefined" ng-href="{{repo.url}}" target="_blank">
+                        <span class="icon" title="Visit site">
+                            <!-- ng-click="pc.featModalToggle($index)" -->
                             <i class="mdi mdi-open-in-new"></i>
                         </span>
-                    </a> -->
+                    </a>
                 </p>
                 <p class="subtitle">{{repo.tech}}</p>
                 <div class="content">
